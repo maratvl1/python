@@ -1,0 +1,29 @@
+import re
+
+# import file text_file.txt
+
+with open('text_file.txt') as f:
+    a = f.read()
+ text = re.findall(r'\w+', a)
+
+#total mord count
+
+wordcount = len(text)
+print(wordcount)
+
+#count of unique words
+
+unique={}
+for w in text:
+    if w in unique:
+	    unique[w]+= 1
+    else:
+	    unique[w] = 1
+uniquecount=len(unique)
+print(uniquecount)
+
+#count number of sentence
+
+sentencecount += a.count('.') + a.count('!') + a.count('?')
+print(sentencecount)
+
